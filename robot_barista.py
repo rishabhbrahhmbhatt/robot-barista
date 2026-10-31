@@ -8,16 +8,27 @@ name = input("What is your name?: ")
 
 print("\nHello , " + name + ", Thank you so much for coming in today.\n") 
 
-menu = "Black coffee, Espresso, Latte, Cappuccino."
+menu = "black coffee, espresso, latte, cappuccino."
 
 print(name + ", What would you like from our menu today? Here is what we are serving.\n" + menu)
 
-order = input()
-price = 40
+order = input("Your order: ").lower()
+
+if order == "latte":
+    price = 120
+elif order == "espresso":
+    price = 110
+elif order == "cappuccino":
+    price = 100
+elif order == "black coffee":
+    price = 50
+else:
+    price = 0
+    print("Not avilable")
 
 Quantity = input("\nHow many coffee would you like: ") 
 total = price * int(Quantity)
 
-print("Thank You. Your total is: " + str(total) + " rupees")
+print("Thank You. Your total is: " + str(total) + " rupees.")
 
 print("\nsounds good " + name + ", we'll have your " + Quantity + " " + order + " Ready for you in moment." )
